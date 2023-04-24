@@ -1,5 +1,3 @@
-import logo from "./logo.svg";
-
 import Notebook from "./components/Notebook";
 
 function App() {
