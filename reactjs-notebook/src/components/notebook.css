@@ -1,10 +1,10 @@
-.inputmultiline {
-  margin:20px;
-  justify-content: space-between;
-  flex-direction: column;
+.GridContainer {
+  width: 100vw;
+  height: 100vh;
+  margin: 10px;
+}
+
+.inputAndButton {
   display: flex;
+  align-items: center;
 }
-
-.buttonx {
-}
-

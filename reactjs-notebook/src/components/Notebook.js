@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button, TextField, Typography } from "@mui/material";
+import { Button, Grid, TextField, Typography } from "@mui/material";
 import "./notebook.css";
 import { useState } from "react";
 
@@ -8,29 +8,35 @@ function Notebook() {
 	const [text, setText] = useState("");
 
 	return (
-		<div className="inputmultiline">
-			<TextField
-				sx={{ width: 500, marginBottom: 2 }}
-				id="outlined-multiline-flexible"
-				label=""
-				multiline
-				onChange={(e) => {
-					setTempVal(e.target.value);
-				}}
-				value={tempVal}
-			/>
-			<Button
-				className="buttonx"
-				variant="contained"
-				sx={{ width: 50 }}
-				onClick={() => {
-					setText((temp) => temp + tempVal + " ");
-					setTempVal("");
-				}}>
-				Submit
-			</Button>
-			<Typography>{text}</Typography>
-		</div>
+		<Grid container className="GridContainer">
+			<Grid item xs={6}>
+				<div className="inputAndButton">
+					<TextField
+						sx={{ width: 500 }}
+						id="outlined-multiline-flexible"
+						label=""
+						multiline
+						onChange={(e) => {
+							setTempVal(e.target.value);
+						}}
+						value={tempVal}
+						placeholder="Enter a new Note"
+					/>
+					<Button
+						variant="contained"
+						sx={{ marginLeft: "40px" }}
+						onClick={() => {
+							setText((temp) => temp + tempVal + " ");
+							setTempVal("");
+						}}>
+						Add Note
+					</Button>
+				</div>
+			</Grid>
+			<Grid item xs={6}>
+				<Typography>{text}</Typography>
+			</Grid>
+		</Grid>
 	);
 }
 
