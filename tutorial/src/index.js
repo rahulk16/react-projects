@@ -34,11 +34,12 @@ const BookList = () => {
 
 const Book = (props) => {
 	console.log(props);
+	const { image, bookTitle, author } = props;
 	return (
 		<article>
-			<h2>{props.image}</h2>
-			<h2>{props.bookTitle}</h2>
-			<h4>{props.author}</h4>
+			<h2>{image}</h2>
+			<h2>{bookTitle}</h2>
+			<h4>{author}</h4>
 		</article>
 	);
 };
