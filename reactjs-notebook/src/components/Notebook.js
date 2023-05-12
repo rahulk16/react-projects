@@ -8,28 +8,32 @@ function Notebook() {
 	const [text, setText] = useState("");
 
 	return (
-		<div className="inputmultiline">
-			<TextField
-				sx={{ width: 500, marginBottom: 2 }}
-				id="outlined-multiline-flexible"
-				label=""
-				multiline
-				onChange={(e) => {
-					setTempVal(e.target.value);
-				}}
-				value={tempVal}
-			/>
-			<Button
-				className="buttonx"
-				variant="contained"
-				sx={{ width: 50 }}
-				onClick={() => {
-					setText((temp) => temp + tempVal + " ");
-					setTempVal("");
-				}}>
-				Submit
-			</Button>
-			<Typography>{text}</Typography>
+		<div>
+			<div className="inputmultiline">
+				<TextField
+					sx={{ width: 500, marginBottom: 2 }}
+					id="outlined-multiline-flexible"
+					label=""
+					multiline
+					onChange={(e) => {
+						setTempVal(e.target.value);
+					}}
+					value={tempVal}
+				/>
+				<Button
+					className="buttonx"
+					variant="contained"
+					sx={{ width: 50 }}
+					onClick={() => {
+						setText((temp) => temp + tempVal + " ");
+						setTempVal("");
+					}}>
+					Submit
+				</Button>
+			</div>
+			<div className="text">
+				<Typography>{text}</Typography>
+			</div>
 		</div>
 	);
 }

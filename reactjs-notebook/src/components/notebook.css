@@ -1,10 +1,11 @@
 .inputmultiline {
   margin:20px;
-  justify-content: space-between;
+  /* justify-content: center; */
   flex-direction: column;
+  align-items: center;
   display: flex;
 }
 
-.buttonx {
+.text {
+  margin: 20px;
 }
-
